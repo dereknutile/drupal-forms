@@ -28,5 +28,16 @@ This repository uses [VLEMP-Drupal](https://github.com/dereknutile/vlemp-drupal.
 
 Note: you can force a drupal version by adding it to the end of the command: `/vagrant/bin/./install-drupal.sh 7.0`
 
+### Create MySql Database
+    $ mysql -uroot -proot
+    $ create database drupal;
+
 ### Test
 Browse to [http://localhost:8080/](http://localhost:8080/).
+
+### Administer
+Browse to [http://localhost:8080/user/login](http://localhost:8080/user/login).
+
+Username: **admin**
+
+Password: **password**
