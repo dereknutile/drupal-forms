@@ -2,7 +2,6 @@
 *~
 /.vagrant
 /tmp
-.sql
 
 # drupal ignores
 # Ignore configuration files that may contain sensitive information.
