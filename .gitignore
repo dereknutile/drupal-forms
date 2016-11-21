@@ -3,3 +3,11 @@
 /.vagrant
 /tmp
 .sql
+
+# drupal ignores
+# Ignore configuration files that may contain sensitive information.
+public/sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+public/sites/*/files
+public/sites/*/private
