@@ -3,7 +3,6 @@
 
 # Configuration Settings #######################################################
 VAGRANTFILE_API_VERSION = "2"
-VAGRANT_SCRIPT_DIR =  'vagrantinstall'
 VAGRANT_BIN_DIR = 'bin'
 VM_BOX = "ubuntu/trusty32"
 SSH_PORT = 8022
@@ -14,7 +13,7 @@ MEMORY = 2048
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = VM_BOX
-    config.vm.provision :shell, path: VAGRANT_SCRIPT_DIR+"/bootstrap.sh"
+    config.vm.provision :shell, path: VAGRANT_BIN_DIR+"/vagrant-bootstrap.sh"
     config.vm.provision :shell, path: VAGRANT_BIN_DIR+"/install-drupal.sh", privileged: false
 
     config.vm.network "forwarded_port", guest: 22,   host: SSH_PORT
