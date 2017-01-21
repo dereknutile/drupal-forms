@@ -15,7 +15,7 @@ mode=$1
 cd /$root_dir/$target_dir
 
 echo "Placing site in maintenance mode ..."
-drush vset --exact maintenance_mode 1
+drush sset system.maintenance_mode 1
 
 echo "Clearing cache ..."
 drush cache-clear all
@@ -26,10 +26,10 @@ drush up drupal
 if [ $1 -ne 1 ]; then
     echo "Site left in maintenance mode for testing."
 else
-    drush vset --exact maintenance_mode 0
+    drush sset system.maintenance_mode 0
     echo "Site no longer in maintenance mode."
     echo "Clearing cache ..."
-    drush cache-clear all
+    drush cache-rebuild
 fi
 
 echo "Drupal core update script complete."
