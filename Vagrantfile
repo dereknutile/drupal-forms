@@ -3,7 +3,7 @@
 
 # Configuration Settings #######################################################
 VAGRANTFILE_API_VERSION = "2"
-VAGRANT_BIN_DIR = 'bin'
+VAGRANT_BIN_DIR = "bin"
 VM_BOX = "ubuntu/trusty32"
 SSH_PORT = 8022
 WEB_PORT = 8080
