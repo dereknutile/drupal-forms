@@ -8,7 +8,7 @@ VM_BOX = "ubuntu/trusty32"
 SSH_PORT = 8022
 WEB_PORT = 8080
 SQL_PORT = 33306
-MEMORY = 2048
+MEMORY = 3072
 ################################################################################
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
